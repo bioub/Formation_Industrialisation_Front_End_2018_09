@@ -5,4 +5,4 @@ Formation Industrialisation Front-End
 
 * [Chocolatey](https://chocolatey.org/)
 * [SourceTree](https://www.sourcetreeapp.com/)
-* [Coderwall](https://coderwall.com/p/euwpig/a-better-git-log)
+* [Alias pour git log - Coderwall](https://coderwall.com/p/euwpig/a-better-git-log)
