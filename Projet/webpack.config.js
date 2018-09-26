@@ -37,7 +37,7 @@ module.exports = (_, { mode }) => {
           use: [
             (mode === 'production') ? MiniCssExtractPlugin.loader : 'style-loader',
             {
-              loader: 'css-loader',
+              loader: 'postcss-loader',
               options: {
                 modules: true,
               },
@@ -48,7 +48,7 @@ module.exports = (_, { mode }) => {
           test: /\.scss$/,
           use: [
             (mode === 'production') ? MiniCssExtractPlugin.loader : 'style-loader',
-            'css-loader',
+            'postcss-loader',
             'sass-loader',
           ],
         },
@@ -56,6 +56,16 @@ module.exports = (_, { mode }) => {
           test: /\.json5$/,
           use: 'json5-loader',
         },
+        {
+          test: /\.js$/,
+          exclude: /node_modules/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env']
+            }
+          }
+        }
       ],
     },
     plugins,
