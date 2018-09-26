@@ -1,4 +1,6 @@
 import css from './horloge.css';
+import { format } from 'date-fns';
+import config from './config.json';
 
 export class Clock {
 
@@ -8,9 +10,9 @@ export class Clock {
   }
 
   start() {
-    this.container.innerText = (new Date).toLocaleTimeString();
+    this.container.innerText = format(new Date, config.dateFormat);
     setInterval(() => {
-      this.container.innerText = (new Date).toLocaleTimeString();
+      this.container.innerText = format(new Date, config.dateFormat);
     }, 1000);
   }
 
