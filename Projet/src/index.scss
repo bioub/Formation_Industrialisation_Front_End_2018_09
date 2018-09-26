@@ -1,0 +1,29 @@
+/*
+
+$mainColor: purple;
+$paddingBody: 10px;
+
+@mixin circle($pct: 50%) {
+  border-radius: $pct;
+}
+
+a {
+  color: $mainColor;
+
+  &:hover {
+    color: darken($mainColor, 20%);
+  }
+}
+
+
+body {
+  padding-top: $paddingBody;
+  padding-bottom: $paddingBody * 3;
+  background-color: lighten($mainColor, 60%);
+
+  > .navbar {
+   // @include circle();
+  }
+}
+
+*/
